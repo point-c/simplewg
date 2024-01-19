@@ -1,5 +1,7 @@
 # SimpleWG
 
+[![Go Reference](https://img.shields.io/badge/godoc-reference-%23007d9c.svg)](https://point-c.github.io/simplewg)
+
 ## Overview
 SimpleWG is a Go package that provides a simplified wrapper around the standard `sync.WaitGroup`. It is designed to make working with goroutines more straightforward by automating the handling of `sync.WaitGroup.Add` and `sync.WaitGroup.Done`. This package is ideal for scenarios where you need to manage the lifecycle of multiple goroutines easily.
 

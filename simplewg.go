@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 )
 
-// Wg struct wraps sync.WaitGroup to offer enhanced concurrency control.
+// Wg struct wraps [sync.WaitGroup] to offer enhanced concurrency control.
 // It manages the lifecycle of goroutines and ensures synchronization between them.
 type Wg struct {
 	wg   sync.WaitGroup

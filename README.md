@@ -102,3 +102,11 @@ The package includes tests that demonstrate its functionality. Use Go's testing 
 ```bash
 go test
 ```
+
+## Godocs
+
+To regenerate godocs:
+
+```bash
+go generate -tags docs ./...
+```

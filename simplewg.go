@@ -1,5 +1,5 @@
 // Package simplewg provides a convenience wrapper for [sync.WaitGroup].
-// It automates the invocation of [sync.WaitGroup.Add] and [sync.WaitGroup.Done]
+// It automates the invocation of [sync.WaitGroup.Add] and [sync.WaitGroup.Done].
 package simplewg
 
 import (

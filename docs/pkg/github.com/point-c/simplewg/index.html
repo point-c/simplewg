@@ -90,7 +90,7 @@
 			<div class="expanded">
 				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
 				<p>Package simplewg provides a convenience wrapper for <a href="https://pkg.go.dev/sync#WaitGroup">sync.WaitGroup</a>.
-It automates the invocation of sync.WaitGroup.Add and sync.WaitGroup.Done
+It automates the invocation of <a href="https://pkg.go.dev/sync#WaitGroup.Add">sync.WaitGroup.Add</a> and <a href="https://pkg.go.dev/sync#WaitGroup.Done">sync.WaitGroup.Done</a>.
 
 				
 			</div>
@@ -156,7 +156,7 @@ It automates the invocation of sync.WaitGroup.Add and sync.WaitGroup.Done
 				
 				
 			</h2>
-			<p>Wg struct wraps sync.WaitGroup to offer enhanced concurrency control.
+			<p>Wg struct wraps <a href="https://pkg.go.dev/sync#WaitGroup">sync.WaitGroup</a> to offer enhanced concurrency control.
 It manages the lifecycle of goroutines and ensures synchronization between them.
 
 			<pre>type Wg struct {
@@ -179,7 +179,7 @@ It manages the lifecycle of goroutines and ensures synchronization between them.
 
 			
 				
-				<h3 id="Wg.Done">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L40">Done</a>
+				<h3 id="Wg.Done">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L42">Done</a>
 					<a class="permalink" href="#Wg.Done">&#xb6;</a>
 					
 					
@@ -193,7 +193,7 @@ The first call to Done prevents new goroutines from starting via Go.
 				
 			
 				
-				<h3 id="Wg.Go">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L22">Go</a>
+				<h3 id="Wg.Go">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L23">Go</a>
 					<a class="permalink" href="#Wg.Go">&#xb6;</a>
 					
 					
@@ -202,13 +202,14 @@ The first call to Done prevents new goroutines from starting via Go.
 				<p>Go method initiates a function in a separate goroutine.
 Once <a href="#Wg.Wait">Wg.Wait</a> has been called for the first time, subsequent calls to Go will not execute the function.
 Returns true if the function is executed, false otherwise.
+Note: Handling of any panics is the responsibility of the caller. This method does not propagate panics created in the underlying goroutine.
 
 				
 				
 				
 			
 				
-				<h3 id="Wg.Wait">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L36">Wait</a>
+				<h3 id="Wg.Wait">func (*Wg) <a href="https://github.com/point-c/simplewg/blob/main/simplewg.go#L38">Wait</a>
 					<a class="permalink" href="#Wg.Wait">&#xb6;</a>
 					
 					

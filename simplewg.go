@@ -19,11 +19,13 @@ type Wg struct {
 // Go method initiates a function in a separate goroutine.
 // Once [Wg.Wait] has been called for the first time, subsequent calls to Go will not execute the function.
 // Returns true if the function is executed, false otherwise.
+// Note: Handling of any panics is the responsibility of the caller. This method does not propagate panics created in the underlying goroutine.
 func (wg *Wg) Go(fn func()) (ok bool) {
 	if wg.wait.Load() == nil {
 		wg.wg.Add(1)
 		go func() {
 			defer wg.wg.Done()
+			defer func() { recover() }()
 			fn()
 		}()
 		return true

@@ -15,14 +15,6 @@ go get github.com/point-c/simplewg
 
 ## Usage
 
-### Importing the Package
-
-First, import the SimpleWG package into your Go file:
-
-```go
-import "github.com/point-c/simplewg"
-```
-
 ### Creating a New WaitGroup
 
 Create a new instance of `Wg`:
